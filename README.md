@@ -4,7 +4,7 @@
 This is a pixel perfect project for an assessment @ Intracto Ghent. In this project, I try to build a pixel perfect webpage based on a previous pdf example by Intracto. I paid attention to: readability of the code, best practices from a previous exercises at Becode, responsiveness of the page as well as semantic HTML elements.
 
 ## TechStack used
-HTML / Cascading Style Sheets
+HTML / Cascading Style Sheets <br>
 CSS Flexbox and Grid
 
 ## Author
