@@ -1,12 +1,10 @@
-
 a:hover {
   text-decoration: underline;
 }
 
-.grid > * {
-  color: #fff;
-  border: 1px solid black;
+.grid>* {
+  color: white;
+  /* border: 1px solid black; */
   /*margin: 10px;*/
   text-align: center;
 }
-
