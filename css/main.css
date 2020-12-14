@@ -14,44 +14,46 @@ body {
 }
 
 h1 {
-    color: white;  
+    color: white;
 }
 
 h2 {
     text-align: left;
-  }
-
-ul li { 
- text-decoration: none;  
- list-style: none;
- display: inline-block;
- float: left;
- padding: 10px;
 }
 
-  a {
+ul li {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    float: left;
+    padding: 10px;
+}
+
+a {
     display: block;
-    font-size: 14px; 
+    font-size: 14px;
     text-decoration: none;
     font-family: Arial;
-    padding-left: 10px;  
-    }
+    padding-left: 10px;
+}
 
 h4 {
     color: white;
 }
 
 .grid {
-    display: grid; /* explicit grid */
+    display: grid;
+    /* explicit grid */
     grid-gap: 5px;
     grid: 0.4fr 0.07fr 0.1fr auto 0.1fr / 155px auto;
-    grid-template-areas: 
-    "h h"
-    "n n"
-    "s t"
-    "s c"
-    "f f";
-     /* min-height: 100vh; */
+    grid-template-areas:
+        "h h"
+        "n n"
+        "s t"
+        "s c"
+        "f f";
+    grid-template-rows: auto;
+    /* min-height: 100vh; */
 }
 
 .header {
@@ -71,27 +73,31 @@ h4 {
 
 .content {
     grid-area: c;
+    padding: 0px;
 }
 
 .sidebar {
- grid-area: s;
- padding: 18px;
- text-align: left;
- font-size: 14px;
+    grid-area: s;
+    border: 1px solid black;
+    padding: 18px;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    text-align: left;
+    font-size: 14px;
 }
 
 .sidebar {
- grid-area: s;   
+    grid-area: s;
 }
 
 .footer {
- grid-area: f;
- background-color:#66a0e6;
- font-size: 13px;
- min-height: 60px;
- display: flex;
- justify-content: center;
- align-items: center;
+    grid-area: f;
+    background-color: #66a0e6;
+    font-size: 13px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-title {
@@ -103,8 +109,7 @@ h4 {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    font-size:12px;
-    
+    font-size: 12px;
 }
 
 .card {
@@ -112,89 +117,89 @@ h4 {
     padding: 0px;
     margin: 20px;
     font-family: arial;
-    border-radius: 2px 2px 5px 5px;
-    box-shadow: 0 4px 8px 0 rgba(93, 93, 93, 0.3);
+    border-radius: 2px 2px 8px 8px;
+    box-shadow: 0 4px 8px 0 rgba(98, 98, 98, 0.3);
     transition: 0.3s;
     width: 200px;
-    height: 200px;
+    height: auto;
     /* min width apply possible */
- }
+}
 
- .card-title {
-     padding: 15px;
-     color: white;
-     text-align: center;
-     background-color:#66a0e6 ; /* make background image */ 
- }
+.card-title {
+    padding: 15px;
+    color: white;
+    text-align: center;
+    background-color: #66a0e6;
+    /* make background image */
+}
 
- .card-body {
-     padding: 15px;
-     text-align: left;
- }
+.card-body {
+    padding: 15px;
+    text-align: left;
+}
 
- .card-text {
-     padding-bottom: 5px;
- }
+.card-text {
+    padding-bottom: 5px;
+}
 
- .card-footer {
+.card-footer {
     padding: 10px;
     text-align: left;
     border-top: 1px solid grey;
- }
+}
 
- /* MEDIA QUERIES FOR RESPONSIVE DESIGN W/ flexbox */ 
- /* responsiveness of the page */
-        
- /* for tablet */
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN W/ flex box */
+/* responsiveness of the page */
 
-     @media only screen 
-    and (max-width: 997px)
-    and (min-device-width : 768px) {
-        .grid {
-            grid-template-columns: 1fr;
-            grid-template-areas:
-                "h"
-                "n"
-                "s"
-                "t"
-                "c"
-                "f"
-        }
+/* for tablet */
 
-         .subgrid {
-            display: flex;
-            flex-wrap: wrap;
-         }
-         
-         .subgrid > .card {
-         flex-basis: 20%;
-         flex-grow:1;
-    }
-    
-        /* for mobile */
-
-     @media only screen 
-    and (max-width: 767px) {
-        
+@media only screen and (min-width: 768px) and (max-width : 1023px) {
     .grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-areas:
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
             "h"
             "n"
             "s"
             "t"
             "c"
             "f";
-        }
+    }
 
-        .subgrid {
-          display: flex;
-          flex-wrap: wrap;
-        }
+    .subgrid {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-        .subgrid > .card {
-          flex-basis: 180px;
-          flex-grow:1;
-        }
-      }
+    .subgrid>.card {
+        flex-basis: 16%;
+        flex-grow: 1;
+    }
+}
+
+/* for mobile */
+
+@media only screen and (max-width: 767px) {
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "h"
+            "n"
+            "s"
+            "t"
+            "c"
+            "f";
+    }
+
+    .subgrid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .subgrid>.card {
+        flex-basis: 35%;
+        flex-grow: 1;
+    }
+}
