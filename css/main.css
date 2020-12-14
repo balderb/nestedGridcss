@@ -13,7 +13,8 @@ body {
     padding: 50px;
 }
 
-h1 {  
+h1 {
+    color: white;  
 }
 
 h2 {
@@ -50,18 +51,23 @@ h4 {
     "s t"
     "s c"
     "f f";
-    min-height: 100vh;
+     /* min-height: 100vh; */
 }
 
 .header {
+    display: flex;
+    min-height: 210px;
+    justify-content: center;
+    align-items: center;
     grid-area: h;
+    background-color: #66a0e6;
     
 }
 
 .main-nav {
     grid-area: n;
     padding: 0px;
-    background: red;
+    background: rgb(239, 121, 121);
 }
 
 .content {
@@ -70,6 +76,7 @@ h4 {
 
 .sidebar {
  grid-area: s;
+ padding: 18px;
  text-align: left;
  font-size: 14px;
 }
@@ -80,45 +87,49 @@ h4 {
 
 .footer {
  grid-area: f;
- background-color:#2000ff;
+ background-color:#66a0e6;
  font-size: 13px;
+ min-height: 60px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .content-title {
     grid-area: t;
-    padding: 0px;
+    padding: 20px;
 }
 
 .subgrid {
-    display: grid;
-    grid-gap: 22px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
     font-size:12px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 1fr;
-    grid-template-areas: 
-        "ct ct ct ct ct ct"
-        "cd cd cd cd cd cd";
-      align-items:center;
+    
 }
 
 .card {
-    border: 1px solid black;
+    border: 1px solid grey;
     padding: 0px;
-    margin: 0;
+    margin: 20px;
     font-family: arial;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 2px 2px 5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(93, 93, 93, 0.3);
+    transition: 0.3s;
+    width: 200px;
+    height: 200px;
     /* min width apply possible */
  }
 
  .card-title {
-     padding: 20px;
+     padding: 15px;
+     color: white;
      text-align: center;
-     background-color: blue ; /* make background image */ 
+     background-color:#66a0e6 ; /* make background image */ 
  }
 
  .card-body {
-     padding: 20px;
+     padding: 15px;
      text-align: left;
  }
 
@@ -127,20 +138,20 @@ h4 {
  }
 
  .card-footer {
-    padding: 20px;
+    padding: 10px;
     text-align: left;
     border-top: 1px solid grey;
  }
+
 
  /* MEDIA QUERIES FOR RESPONSIVE DESIGN W/ flexbox */ 
  /* responsiveness of the page */
         /* for tablet */
 
      @media only screen 
-    and (max-width: 1024px)
+    and (max-width: 997px)
     and (min-device-width : 768px) {
         .grid {
-            display: grid;
             grid-template-columns: 1fr;
             grid-template-areas:
                 "h"
@@ -157,7 +168,8 @@ h4 {
          }
          
          .subgrid > .card {
-         flex-basis: 18%;
+         flex-basis: 20%;
+         flex-grow:1;
     }
     
         /* for mobile */
@@ -183,6 +195,8 @@ h4 {
         }
 
         .subgrid > .card {
-          flex-basis: 45%;
+          flex-basis: 180px;
+          flex-grow:1;
         }
       } 
+
