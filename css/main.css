@@ -61,7 +61,6 @@ h4 {
     align-items: center;
     grid-area: h;
     background-color: #66a0e6;
-    
 }
 
 .main-nav {
@@ -143,10 +142,10 @@ h4 {
     border-top: 1px solid grey;
  }
 
-
  /* MEDIA QUERIES FOR RESPONSIVE DESIGN W/ flexbox */ 
  /* responsiveness of the page */
-        /* for tablet */
+        
+ /* for tablet */
 
      @media only screen 
     and (max-width: 997px)
@@ -198,5 +197,4 @@ h4 {
           flex-basis: 180px;
           flex-grow:1;
         }
-      } 
-
+      }
